@@ -1,10 +1,12 @@
-package Heranca_e_Interfaces;
+package EventSystem;
 
 public class Usuario {
     private String nome;
+    private PacoteEnum pacote;
 
     public Usuario(String nome) {
         this.nome = nome;
+        this.pacote = PacoteEnum.FREE;
     }
 
     public String getNome() {
@@ -14,4 +16,13 @@ public class Usuario {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public PacoteEnum getPacote() {
+        return pacote;
+    }
+
+    public void setPacote(PacoteEnum pacote) {
+        this.pacote = pacote;
+    }
+
 }

@@ -1,4 +1,4 @@
-package Heranca_e_Interfaces;
+package EventSystem;
 
 import java.time.LocalDate;
 
@@ -13,14 +13,22 @@ public class Main {
         System.out.println("---Event 1---");
         String description1 = "evento top pra ser feliz!";
         Evento event1 = new EventoPresencial("Java for Dummies", LocalDate.of(2020,8,10),description1 ,user1,"SENAI/SC",20);
-        event1.addParticipants(user2);
+        try {
+            event1.addParticipants(user2);
+        } catch (Exception e) {
+            e.printStackTrace();//may be method to send a email
+        }
 
         System.out.println("---Event 2---");
         String description2 = "evento top pra ser triste!";
         Evento event2 = new EventoVirtual("PostgreSQL for Dummies", LocalDate.of(2020,8,10),description2 ,user1,"https://eventosmassas.com.br/issoae");
-        event2.addParticipants(user1);
-        event2.addParticipants(user2);
-        event2.addParticipants(user3);
+        try {
+            event2.addParticipants(user1);
+            event2.addParticipants(user2);
+            event2.addParticipants(user3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         event2.delParticipants(user2);
 
         System.out.println("---End---");

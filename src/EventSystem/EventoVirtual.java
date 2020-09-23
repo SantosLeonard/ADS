@@ -1,4 +1,4 @@
-package Heranca_e_Interfaces;
+package EventSystem;
 
 import java.time.LocalDate;
 

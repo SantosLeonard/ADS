@@ -1,7 +1,6 @@
-package Heranca_e_Interfaces;
+package EventSystem;
 
 import java.time.LocalDate;
-import java.time.Year;
 
 public class EventoPresencial extends Evento{
 
@@ -33,7 +32,11 @@ public class EventoPresencial extends Evento{
     @Override
     public void addParticipants(Usuario participants){
         if (this.getMaxCapacity() <= this.maxCapacity){
-            super.addParticipants(participants);
+            try {
+                super.addParticipants(participants);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
